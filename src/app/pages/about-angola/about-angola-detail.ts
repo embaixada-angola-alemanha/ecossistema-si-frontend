@@ -37,7 +37,7 @@ import { LocalizedContentPipe } from '@shared/pipes/localized-content.pipe';
     </section>
   `,
   styles: [`
-    @import '../shared-page';
+    @use '../shared-page';
 
     .back-link {
       display: inline-flex;

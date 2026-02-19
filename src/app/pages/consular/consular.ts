@@ -42,7 +42,7 @@ import { TranslateModule } from '@ngx-translate/core';
     </section>
   `,
   styles: [`
-    @import '../shared-page';
+    @use '../shared-page';
 
     .services-grid {
       display: grid;

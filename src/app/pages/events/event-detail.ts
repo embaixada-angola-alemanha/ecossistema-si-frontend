@@ -62,7 +62,7 @@ import { LanguageService } from '@core/services/language.service';
     </section>
   `,
   styles: [`
-    @import '../shared-page';
+    @use '../shared-page';
 
     .back-link {
       display: inline-flex;

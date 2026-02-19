@@ -30,7 +30,7 @@ import { LocalizedContentPipe } from '@shared/pipes/localized-content.pipe';
       </div>
     </section>
   `,
-  styles: [`@import '../shared-page';`]
+  styles: [`@use '../shared-page';`]
 })
 export class Bilateral implements OnInit {
 
