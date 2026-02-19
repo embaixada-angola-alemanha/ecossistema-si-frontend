@@ -1,0 +1,18 @@
+<section class="page-header">
+  <div class="container">
+    <h1>{{ 'ambassador.title' | translate }}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    @if (loading()) {
+      <p class="loading-text">{{ 'common.loading' | translate }}</p>
+    } @else if (page()) {
+      <article class="page-content">
+        <h2 class="page-content__title">{{ page()!.translations | localizedContent:'titulo' }}</h2>
+        <div class="page-content__body" [innerHTML]="page()!.translations | localizedContent:'conteudo'"></div>
+      </article>
+    }
+  </div>
+</section>

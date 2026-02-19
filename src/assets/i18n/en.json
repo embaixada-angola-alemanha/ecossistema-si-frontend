@@ -1,0 +1,106 @@
+{
+  "accessibility": {
+    "skip_to_content": "Skip to main content"
+  },
+  "header": {
+    "republic": "Republic of Angola",
+    "embassy": "Embassy of Angola",
+    "country": "Federal Republic of Germany"
+  },
+  "nav": {
+    "home": "Home",
+    "ambassador": "Ambassador",
+    "about_angola": "About Angola",
+    "bilateral": "Bilateral Relations",
+    "consular": "Consular Section",
+    "events": "Events",
+    "contacts": "Contacts"
+  },
+  "home": {
+    "title": "Home",
+    "hero_title": "Embassy of the Republic of Angola",
+    "hero_subtitle": "in the Federal Republic of Germany",
+    "hero_cta": "Consular Section",
+    "highlights": "Highlights",
+    "upcoming_events": "Upcoming Events",
+    "view_all_events": "View All Events",
+    "quick_access": "Quick Access",
+    "no_events": "No scheduled events",
+    "consular_services": "Consular Services",
+    "consular_desc": "Visas, passports, civil registration and other consular services.",
+    "about_angola_title": "About Angola",
+    "about_angola_desc": "Discover the country, its history, geography, culture and economy.",
+    "bilateral_title": "Bilateral Relations",
+    "bilateral_desc": "Cooperation between Angola and Germany."
+  },
+  "ambassador": {
+    "title": "Ambassador"
+  },
+  "about_angola": {
+    "title": "About Angola",
+    "sections": {
+      "presidente": "President of the Republic",
+      "poderes": "State Organs",
+      "geografia": "Geography",
+      "historia": "History",
+      "demografia": "Demographics",
+      "economia": "Economy",
+      "cultura": "Culture",
+      "simbolos": "National Symbols"
+    }
+  },
+  "bilateral": {
+    "title": "Bilateral Relations"
+  },
+  "consular": {
+    "title": "Consular Section",
+    "services": "Services",
+    "visas": "Visas",
+    "passports": "Passports",
+    "civil_registry": "Civil Registration",
+    "notarial": "Notarial Services",
+    "appointments": "Appointments"
+  },
+  "events": {
+    "title": "Events",
+    "detail": "Event Detail",
+    "upcoming": "Upcoming Events",
+    "past": "Past Events",
+    "date": "Date",
+    "location": "Location",
+    "type": "Type",
+    "no_events": "No events found",
+    "load_more": "Load More"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "department": "Department",
+    "address": "Address",
+    "phone": "Phone",
+    "fax": "Fax",
+    "email": "Email",
+    "hours": "Office Hours",
+    "map": "Location"
+  },
+  "not_found": {
+    "title": "Page Not Found",
+    "message": "The page you are looking for does not exist or has been removed.",
+    "back_home": "Back to Home"
+  },
+  "footer": {
+    "embassy": "Embassy of Angola",
+    "embassy_full": "Embassy of the Republic of Angola in the Federal Republic of Germany",
+    "quick_links": "Quick Links",
+    "contact": "Contact",
+    "hours": "Office Hours",
+    "copyright": "Embassy of Angola in Germany. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred. Please try again.",
+    "read_more": "Read More",
+    "back": "Back"
+  }
+}

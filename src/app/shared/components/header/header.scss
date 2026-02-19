@@ -1,0 +1,306 @@
+/* ── Top Strip ──────────────────────────────────────────────────── */
+
+.top-strip {
+  background: var(--red);
+  color: var(--white);
+  height: var(--top-strip-height);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    font-family: var(--font-serif);
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    color: var(--gold-light);
+  }
+
+  &__lang {
+    display: flex;
+    gap: 2px;
+  }
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 2px 8px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: var(--font-sans);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
+  }
+
+  &--active {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    border-color: var(--gold);
+  }
+}
+
+/* ── Header ────────────────────────────────────────────────────── */
+
+.header {
+  background: var(--white);
+  height: var(--header-height);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 100;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    text-decoration: none;
+    color: var(--text);
+
+    &:hover { text-decoration: none; }
+  }
+
+  &__coat-of-arms {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  &__titles {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+  }
+
+  &__hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-sm);
+
+    .hamburger-line {
+      width: 24px;
+      height: 2px;
+      background: var(--black);
+      transition: all var(--transition);
+    }
+  }
+}
+
+/* ── Navigation ────────────────────────────────────────────────── */
+
+.nav {
+  background: var(--red);
+  height: var(--nav-height);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 0;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 var(--space-lg);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: all var(--transition);
+    white-space: nowrap;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.15);
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    &--active {
+      background: rgba(0, 0, 0, 0.2);
+      color: var(--white);
+      border-bottom: 2px solid var(--gold);
+    }
+
+    &--has-dropdown {
+      .nav__arrow {
+        font-size: 16px;
+        margin-left: 2px;
+        transition: transform var(--transition);
+      }
+    }
+  }
+
+  &__dropdown {
+    position: relative;
+    height: 100%;
+    display: flex;
+
+    &:hover .nav__dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    &:hover .nav__arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 24px var(--shadow-strong);
+    border-radius: 0 0 4px 4px;
+    padding: var(--space-xs) 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+    transition: all var(--transition);
+    z-index: 200;
+  }
+
+  &__dropdown-item {
+    display: block;
+    padding: var(--space-sm) var(--space-lg);
+    color: var(--text);
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    text-decoration: none;
+    transition: all var(--transition);
+
+    &:hover {
+      background: rgba(204, 9, 47, 0.06);
+      color: var(--red);
+      text-decoration: none;
+    }
+  }
+}
+
+/* ── Mobile ────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .header {
+    &__hamburger {
+      display: flex;
+    }
+
+    &__coat-of-arms {
+      width: 36px;
+      height: 36px;
+    }
+
+    &__title {
+      font-size: 0.9rem;
+    }
+  }
+
+  .nav {
+    position: fixed;
+    top: calc(var(--top-strip-height) + var(--header-height));
+    left: 0;
+    right: 0;
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-slow);
+    z-index: 99;
+
+    &--open {
+      max-height: 100vh;
+    }
+
+    &__inner {
+      flex-direction: column;
+      height: auto;
+      padding: var(--space-sm) 0;
+    }
+
+    &__link {
+      width: 100%;
+      padding: var(--space-md) var(--space-lg);
+      height: auto;
+      border-bottom: none;
+
+      &--active {
+        border-bottom: none;
+        border-left: 3px solid var(--gold);
+      }
+    }
+
+    &__dropdown {
+      flex-direction: column;
+      height: auto;
+
+      .nav__dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        background: rgba(0, 0, 0, 0.1);
+        padding: 0;
+        min-width: unset;
+      }
+
+      .nav__dropdown-item {
+        color: rgba(255, 255, 255, 0.8);
+        padding-left: var(--space-2xl);
+        font-size: 0.8rem;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.15);
+          color: var(--white);
+        }
+      }
+    }
+  }
+}

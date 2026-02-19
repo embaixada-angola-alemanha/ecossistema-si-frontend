@@ -1,0 +1,74 @@
+<footer class="footer" role="contentinfo">
+  <div class="container footer__inner">
+
+    <!-- Column 1: Embassy info -->
+    <div class="footer__col">
+      <h3 class="footer__heading">{{ 'footer.embassy' | translate }}</h3>
+      <p class="footer__text">{{ 'footer.embassy_full' | translate }}</p>
+      @if (contacts().length > 0) {
+        <p class="footer__text">
+          {{ contacts()[0].endereco }}<br>
+          {{ contacts()[0].codigoPostal }} {{ contacts()[0].cidade }}
+        </p>
+      }
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="footer__col">
+      <h3 class="footer__heading">{{ 'footer.quick_links' | translate }}</h3>
+      <ul class="footer__links">
+        <li><a routerLink="/embaixador">{{ 'nav.ambassador' | translate }}</a></li>
+        <li><a routerLink="/sobre-angola">{{ 'nav.about_angola' | translate }}</a></li>
+        <li><a routerLink="/relacoes-bilaterais">{{ 'nav.bilateral' | translate }}</a></li>
+        <li><a routerLink="/sector-consular">{{ 'nav.consular' | translate }}</a></li>
+        <li><a routerLink="/eventos">{{ 'nav.events' | translate }}</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Contact -->
+    <div class="footer__col">
+      <h3 class="footer__heading">{{ 'footer.contact' | translate }}</h3>
+      @if (contacts().length > 0) {
+        <ul class="footer__contact-list">
+          @if (contacts()[0].telefone) {
+            <li>
+              <span class="material-icons-outlined">phone</span>
+              {{ contacts()[0].telefone }}
+            </li>
+          }
+          @if (contacts()[0].fax) {
+            <li>
+              <span class="material-icons-outlined">fax</span>
+              {{ contacts()[0].fax }}
+            </li>
+          }
+          @if (contacts()[0].email) {
+            <li>
+              <span class="material-icons-outlined">email</span>
+              <a href="mailto:{{ contacts()[0].email }}">{{ contacts()[0].email }}</a>
+            </li>
+          }
+        </ul>
+      }
+    </div>
+
+    <!-- Column 4: Hours -->
+    <div class="footer__col">
+      <h3 class="footer__heading">{{ 'footer.hours' | translate }}</h3>
+      @if (contacts().length > 0) {
+        <p class="footer__text footer__hours">{{ contacts()[0].horarioPt }}</p>
+      }
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <span>&copy; {{ currentYear }} {{ 'footer.copyright' | translate }}</span>
+      <span class="footer__bottom-links">
+        <a routerLink="/privacidade">{{ 'footer.privacy' | translate }}</a>
+        <a routerLink="/termos">{{ 'footer.terms' | translate }}</a>
+      </span>
+    </div>
+  </div>
+</footer>

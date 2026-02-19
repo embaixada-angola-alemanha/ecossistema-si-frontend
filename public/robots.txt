@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.angola-botschaft.de/sitemap.xml
+
+# Disallow admin/API paths
+Disallow: /api/

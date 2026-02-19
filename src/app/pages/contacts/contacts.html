@@ -1,0 +1,73 @@
+<section class="page-header">
+  <div class="container">
+    <h1>{{ 'contacts.title' | translate }}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    @if (loading()) {
+      <p class="loading-text">{{ 'common.loading' | translate }}</p>
+    } @else {
+      <div class="contacts-grid">
+        @for (contact of contacts(); track contact.id) {
+          <div class="contact-card">
+            <h3 class="contact-card__dept">{{ contact.departamento }}</h3>
+
+            @if (contact.endereco) {
+              <div class="contact-card__item">
+                <span class="material-icons-outlined">location_on</span>
+                <div>
+                  <p>{{ contact.endereco }}</p>
+                  <p>{{ contact.codigoPostal }} {{ contact.cidade }}</p>
+                  @if (contact.pais) { <p>{{ contact.pais }}</p> }
+                </div>
+              </div>
+            }
+
+            @if (contact.telefone) {
+              <div class="contact-card__item">
+                <span class="material-icons-outlined">phone</span>
+                <a href="tel:{{ contact.telefone }}">{{ contact.telefone }}</a>
+              </div>
+            }
+
+            @if (contact.fax) {
+              <div class="contact-card__item">
+                <span class="material-icons-outlined">fax</span>
+                <span>{{ contact.fax }}</span>
+              </div>
+            }
+
+            @if (contact.email) {
+              <div class="contact-card__item">
+                <span class="material-icons-outlined">email</span>
+                <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+              </div>
+            }
+
+            @if (getHorario(contact)) {
+              <div class="contact-card__item">
+                <span class="material-icons-outlined">schedule</span>
+                <span class="contact-card__hours">{{ getHorario(contact) }}</span>
+              </div>
+            }
+          </div>
+        }
+      </div>
+
+      <!-- Map placeholder -->
+      @if (contacts().length > 0 && contacts()[0].latitude) {
+        <div class="map-section">
+          <h2 class="section__title">{{ 'contacts.map' | translate }}</h2>
+          <div class="map-placeholder" id="contact-map">
+            <div class="map-placeholder__inner">
+              <span class="material-icons-outlined">map</span>
+              <p>{{ contacts()[0].latitude }}, {{ contacts()[0].longitude }}</p>
+            </div>
+          </div>
+        </div>
+      }
+    }
+  </div>
+</section>

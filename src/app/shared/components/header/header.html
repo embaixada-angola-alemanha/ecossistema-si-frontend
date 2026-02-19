@@ -1,0 +1,121 @@
+<!-- Top strip -->
+<div class="top-strip">
+  <div class="container top-strip__inner">
+    <span class="top-strip__text">{{ 'header.republic' | translate }}</span>
+    <div class="top-strip__lang">
+      @for (lang of languages; track lang.code) {
+        <button
+          class="lang-btn"
+          [class.lang-btn--active]="langService.currentLang() === lang.code"
+          (click)="changeLang(lang.code)"
+          [attr.aria-label]="lang.label">
+          {{ lang.code | uppercase }}
+        </button>
+      }
+    </div>
+  </div>
+</div>
+
+<!-- Main header -->
+<header class="header" role="banner">
+  <div class="container header__inner">
+    <a routerLink="/" class="header__brand" (click)="closeMobileMenu()">
+      <img src="assets/images/brasao-angola.svg"
+           alt="Brasao da Republica de Angola"
+           class="header__coat-of-arms"
+           width="48" height="48">
+      <div class="header__titles">
+        <span class="header__title">{{ 'header.embassy' | translate }}</span>
+        <span class="header__subtitle">{{ 'header.country' | translate }}</span>
+      </div>
+    </a>
+
+    <button
+      class="header__hamburger"
+      (click)="toggleMobileMenu()"
+      [attr.aria-expanded]="mobileMenuOpen()"
+      aria-label="Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Navigation -->
+<nav class="nav" [class.nav--open]="mobileMenuOpen()" role="navigation" aria-label="Main navigation">
+  <div class="container nav__inner">
+    <a routerLink="/"
+       routerLinkActive="nav__link--active"
+       [routerLinkActiveOptions]="{exact: true}"
+       class="nav__link"
+       (click)="closeMobileMenu()">
+      {{ 'nav.home' | translate }}
+    </a>
+    <a routerLink="/embaixador"
+       routerLinkActive="nav__link--active"
+       class="nav__link"
+       (click)="closeMobileMenu()">
+      {{ 'nav.ambassador' | translate }}
+    </a>
+    <div class="nav__dropdown">
+      <a routerLink="/sobre-angola"
+         routerLinkActive="nav__link--active"
+         class="nav__link nav__link--has-dropdown"
+         (click)="closeMobileMenu()">
+        {{ 'nav.about_angola' | translate }}
+        <span class="material-icons-outlined nav__arrow">expand_more</span>
+      </a>
+      <div class="nav__dropdown-menu">
+        <a routerLink="/sobre-angola/presidente" class="nav__dropdown-item" (click)="closeMobileMenu()">
+          {{ 'about_angola.sections.presidente' | translate }}
+        </a>
+        <a routerLink="/sobre-angola/poderes" class="nav__dropdown-item" (click)="closeMobileMenu()">
+          {{ 'about_angola.sections.poderes' | translate }}
+        </a>
+        <a routerLink="/sobre-angola/geografia" class="nav__dropdown-item" (click)="closeMobileMenu()">
+          {{ 'about_angola.sections.geografia' | translate }}
+        </a>
+        <a routerLink="/sobre-angola/historia" class="nav__dropdown-item" (click)="closeMobileMenu()">
+          {{ 'about_angola.sections.historia' | translate }}
+        </a>
+        <a routerLink="/sobre-angola/demografia" class="nav__dropdown-item" (click)="closeMobileMenu()">
+          {{ 'about_angola.sections.demografia' | translate }}
+        </a>
+        <a routerLink="/sobre-angola/economia" class="nav__dropdown-item" (click)="closeMobileMenu()">
+          {{ 'about_angola.sections.economia' | translate }}
+        </a>
+        <a routerLink="/sobre-angola/cultura" class="nav__dropdown-item" (click)="closeMobileMenu()">
+          {{ 'about_angola.sections.cultura' | translate }}
+        </a>
+        <a routerLink="/sobre-angola/simbolos" class="nav__dropdown-item" (click)="closeMobileMenu()">
+          {{ 'about_angola.sections.simbolos' | translate }}
+        </a>
+      </div>
+    </div>
+    <a routerLink="/relacoes-bilaterais"
+       routerLinkActive="nav__link--active"
+       class="nav__link"
+       (click)="closeMobileMenu()">
+      {{ 'nav.bilateral' | translate }}
+    </a>
+    <a routerLink="/sector-consular"
+       routerLinkActive="nav__link--active"
+       class="nav__link"
+       (click)="closeMobileMenu()">
+      {{ 'nav.consular' | translate }}
+    </a>
+    <a routerLink="/eventos"
+       routerLinkActive="nav__link--active"
+       class="nav__link"
+       (click)="closeMobileMenu()">
+      {{ 'nav.events' | translate }}
+    </a>
+    <a routerLink="/contactos"
+       routerLinkActive="nav__link--active"
+       class="nav__link"
+       (click)="closeMobileMenu()">
+      {{ 'nav.contacts' | translate }}
+    </a>
+  </div>
+</nav>

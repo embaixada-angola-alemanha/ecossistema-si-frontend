@@ -1,0 +1,28 @@
+<section class="page-header">
+  <div class="container">
+    <h1>{{ 'about_angola.title' | translate }}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    @if (loading()) {
+      <p class="loading-text">{{ 'common.loading' | translate }}</p>
+    } @else {
+      @if (page()) {
+        <div class="about-intro page-content">
+          <div class="page-content__body" [innerHTML]="page()!.translations | localizedContent:'conteudo'"></div>
+        </div>
+      }
+
+      <div class="subsections-grid">
+        @for (sub of subsections; track sub.slug) {
+          <a [routerLink]="['/sobre-angola', sub.slug]" class="subsection-card">
+            <span class="material-icons-outlined subsection-card__icon">{{ sub.icon }}</span>
+            <h3 class="subsection-card__title">{{ 'about_angola.sections.' + sub.slug | translate }}</h3>
+          </a>
+        }
+      </div>
+    }
+  </div>
+</section>

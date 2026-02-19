@@ -1,0 +1,106 @@
+{
+  "accessibility": {
+    "skip_to_content": "Salta pa konteudo prinsipál"
+  },
+  "header": {
+    "republic": "Repúblika di Angola",
+    "embassy": "Enbaixada di Angola",
+    "country": "Repúblika Federal di Alemanha"
+  },
+  "nav": {
+    "home": "Inísiu",
+    "ambassador": "Enbaixadora",
+    "about_angola": "Sobri Angola",
+    "bilateral": "Relasons Bilateral",
+    "consular": "Sektor Konsular",
+    "events": "Eventus",
+    "contacts": "Kontatus"
+  },
+  "home": {
+    "title": "Inísiu",
+    "hero_title": "Enbaixada di Repúblika di Angola",
+    "hero_subtitle": "na Repúblika Federal di Alemanha",
+    "hero_cta": "Sektor Konsular",
+    "highlights": "Destakis",
+    "upcoming_events": "Prósimu Eventus",
+    "view_all_events": "Ver Tudu Eventus",
+    "quick_access": "Asesu Rápidu",
+    "no_events": "Ninhun eventu markadu",
+    "consular_services": "Servisus Konsular",
+    "consular_desc": "Vistus, pasaportis, registu sivil i otrus servisus konsular.",
+    "about_angola_title": "Sobri Angola",
+    "about_angola_desc": "Kunhesi país, si istória, jiografia, kultura i ekonomia.",
+    "bilateral_title": "Relasons Bilateral",
+    "bilateral_desc": "Kooperason entri Angola i Alemanha."
+  },
+  "ambassador": {
+    "title": "Enbaixadora"
+  },
+  "about_angola": {
+    "title": "Sobri Angola",
+    "sections": {
+      "presidente": "Prezidenti di Repúblika",
+      "poderes": "Órgons di Soberania",
+      "geografia": "Jiografia",
+      "historia": "Istória",
+      "demografia": "Demografia",
+      "economia": "Ekonomia",
+      "cultura": "Kultura",
+      "simbolos": "Símbolus Nasional"
+    }
+  },
+  "bilateral": {
+    "title": "Relasons Bilateral"
+  },
+  "consular": {
+    "title": "Sektor Konsular",
+    "services": "Servisus",
+    "visas": "Vistus",
+    "passports": "Pasaportis",
+    "civil_registry": "Registu Sivil",
+    "notarial": "Servisus Notarial",
+    "appointments": "Agendamentus"
+  },
+  "events": {
+    "title": "Eventus",
+    "detail": "Detalhi di Eventu",
+    "upcoming": "Prósimu Eventus",
+    "past": "Eventus Pasadu",
+    "date": "Data",
+    "location": "Lokal",
+    "type": "Tipu",
+    "no_events": "Ninhun eventu enkontrádu",
+    "load_more": "Karega Mas"
+  },
+  "contacts": {
+    "title": "Kontatus",
+    "department": "Departamentu",
+    "address": "Morada",
+    "phone": "Telefoni",
+    "fax": "Fax",
+    "email": "Email",
+    "hours": "Orário di Atendimentu",
+    "map": "Lokalizason"
+  },
+  "not_found": {
+    "title": "Pájina Ka Enkontrádu",
+    "message": "Pájina ki bu sta prokura ka ezisti o foi removidu.",
+    "back_home": "Volta pa Inísiu"
+  },
+  "footer": {
+    "embassy": "Enbaixada di Angola",
+    "embassy_full": "Enbaixada di Repúblika di Angola na Repúblika Federal di Alemanha",
+    "quick_links": "Links Rápidu",
+    "contact": "Kontatu",
+    "hours": "Orário",
+    "copyright": "Enbaixada di Angola na Alemanha. Tudu diretus rezervadu.",
+    "privacy": "Polítika di Privacidade",
+    "terms": "Termus di Uzu"
+  },
+  "common": {
+    "loading": "Sta karega...",
+    "error": "Okorreu un éru. Tenta di novu.",
+    "read_more": "Le Mas",
+    "back": "Volta"
+  }
+}

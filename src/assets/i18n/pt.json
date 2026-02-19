@@ -1,0 +1,106 @@
+{
+  "accessibility": {
+    "skip_to_content": "Saltar para o conteudo"
+  },
+  "header": {
+    "republic": "Republica de Angola",
+    "embassy": "Embaixada de Angola",
+    "country": "Republica Federal da Alemanha"
+  },
+  "nav": {
+    "home": "Inicio",
+    "ambassador": "Embaixadora",
+    "about_angola": "Sobre Angola",
+    "bilateral": "Relacoes Bilaterais",
+    "consular": "Sector Consular",
+    "events": "Eventos",
+    "contacts": "Contactos"
+  },
+  "home": {
+    "title": "Inicio",
+    "hero_title": "Embaixada da Republica de Angola",
+    "hero_subtitle": "na Republica Federal da Alemanha",
+    "hero_cta": "Sector Consular",
+    "highlights": "Destaques",
+    "upcoming_events": "Proximos Eventos",
+    "view_all_events": "Ver Todos os Eventos",
+    "quick_access": "Acesso Rapido",
+    "no_events": "Nenhum evento agendado",
+    "consular_services": "Servicos Consulares",
+    "consular_desc": "Vistos, passaportes, registos civis e outros servicos consulares.",
+    "about_angola_title": "Sobre Angola",
+    "about_angola_desc": "Conheca o pais, a sua historia, geografia, cultura e economia.",
+    "bilateral_title": "Relacoes Bilaterais",
+    "bilateral_desc": "Cooperacao entre Angola e a Alemanha."
+  },
+  "ambassador": {
+    "title": "Embaixadora"
+  },
+  "about_angola": {
+    "title": "Sobre Angola",
+    "sections": {
+      "presidente": "Presidente da Republica",
+      "poderes": "Orgaos de Soberania",
+      "geografia": "Geografia",
+      "historia": "Historia",
+      "demografia": "Demografia",
+      "economia": "Economia",
+      "cultura": "Cultura",
+      "simbolos": "Simbolos Nacionais"
+    }
+  },
+  "bilateral": {
+    "title": "Relacoes Bilaterais"
+  },
+  "consular": {
+    "title": "Sector Consular",
+    "services": "Servicos",
+    "visas": "Vistos",
+    "passports": "Passaportes",
+    "civil_registry": "Registo Civil",
+    "notarial": "Servicos Notariais",
+    "appointments": "Agendamentos"
+  },
+  "events": {
+    "title": "Eventos",
+    "detail": "Detalhe do Evento",
+    "upcoming": "Proximos Eventos",
+    "past": "Eventos Passados",
+    "date": "Data",
+    "location": "Local",
+    "type": "Tipo",
+    "no_events": "Nenhum evento encontrado",
+    "load_more": "Carregar Mais"
+  },
+  "contacts": {
+    "title": "Contactos",
+    "department": "Departamento",
+    "address": "Morada",
+    "phone": "Telefone",
+    "fax": "Fax",
+    "email": "Email",
+    "hours": "Horario de Atendimento",
+    "map": "Localizacao"
+  },
+  "not_found": {
+    "title": "Pagina Nao Encontrada",
+    "message": "A pagina que procura nao existe ou foi removida.",
+    "back_home": "Voltar ao Inicio"
+  },
+  "footer": {
+    "embassy": "Embaixada de Angola",
+    "embassy_full": "Embaixada da Republica de Angola na Republica Federal da Alemanha",
+    "quick_links": "Links Rapidos",
+    "contact": "Contacto",
+    "hours": "Horario",
+    "copyright": "Embaixada de Angola na Alemanha. Todos os direitos reservados.",
+    "privacy": "Politica de Privacidade",
+    "terms": "Termos de Uso"
+  },
+  "common": {
+    "loading": "A carregar...",
+    "error": "Ocorreu um erro. Tente novamente.",
+    "read_more": "Ler Mais",
+    "back": "Voltar"
+  }
+}

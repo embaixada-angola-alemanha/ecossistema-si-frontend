@@ -1,0 +1,83 @@
+/* ── Shared page styles ─────────────────────────────────────────── */
+
+.page-header {
+  background: var(--red);
+  padding: var(--space-xl) 0;
+
+  h1 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--white);
+    margin: 0;
+  }
+}
+
+.page-content {
+  max-width: 800px;
+
+  &__title {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--red);
+    display: inline-block;
+  }
+
+  &__body {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text);
+
+    h2, h3, h4 {
+      margin-top: var(--space-xl);
+      margin-bottom: var(--space-md);
+    }
+
+    p {
+      margin-bottom: var(--space-md);
+    }
+
+    ul, ol {
+      margin: var(--space-md) 0;
+      padding-left: var(--space-xl);
+      list-style: disc;
+    }
+
+    img {
+      margin: var(--space-lg) 0;
+      border-radius: 4px;
+    }
+
+    blockquote {
+      border-left: 3px solid var(--red);
+      padding-left: var(--space-md);
+      margin: var(--space-lg) 0;
+      font-style: italic;
+      color: var(--text-light);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-lg) 0;
+
+      th, td {
+        padding: var(--space-sm) var(--space-md);
+        border: 1px solid var(--border);
+        text-align: left;
+      }
+
+      th {
+        background: var(--bg-alt);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.loading-text {
+  text-align: center;
+  color: var(--text-light);
+  padding: var(--space-xl) 0;
+}

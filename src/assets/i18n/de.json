@@ -1,0 +1,106 @@
+{
+  "accessibility": {
+    "skip_to_content": "Zum Hauptinhalt springen"
+  },
+  "header": {
+    "republic": "Republik Angola",
+    "embassy": "Botschaft von Angola",
+    "country": "Bundesrepublik Deutschland"
+  },
+  "nav": {
+    "home": "Startseite",
+    "ambassador": "Botschafterin",
+    "about_angola": "Uber Angola",
+    "bilateral": "Bilaterale Beziehungen",
+    "consular": "Konsularabteilung",
+    "events": "Veranstaltungen",
+    "contacts": "Kontakt"
+  },
+  "home": {
+    "title": "Startseite",
+    "hero_title": "Botschaft der Republik Angola",
+    "hero_subtitle": "in der Bundesrepublik Deutschland",
+    "hero_cta": "Konsularabteilung",
+    "highlights": "Highlights",
+    "upcoming_events": "Kommende Veranstaltungen",
+    "view_all_events": "Alle Veranstaltungen",
+    "quick_access": "Schnellzugriff",
+    "no_events": "Keine geplanten Veranstaltungen",
+    "consular_services": "Konsulardienste",
+    "consular_desc": "Visa, Reisepasse, Zivilstandsurkunden und andere konsularische Dienste.",
+    "about_angola_title": "Uber Angola",
+    "about_angola_desc": "Entdecken Sie das Land, seine Geschichte, Geografie, Kultur und Wirtschaft.",
+    "bilateral_title": "Bilaterale Beziehungen",
+    "bilateral_desc": "Zusammenarbeit zwischen Angola und Deutschland."
+  },
+  "ambassador": {
+    "title": "Botschafterin"
+  },
+  "about_angola": {
+    "title": "Uber Angola",
+    "sections": {
+      "presidente": "Prasident der Republik",
+      "poderes": "Staatsorgane",
+      "geografia": "Geografie",
+      "historia": "Geschichte",
+      "demografia": "Demografie",
+      "economia": "Wirtschaft",
+      "cultura": "Kultur",
+      "simbolos": "Nationalsymbole"
+    }
+  },
+  "bilateral": {
+    "title": "Bilaterale Beziehungen"
+  },
+  "consular": {
+    "title": "Konsularabteilung",
+    "services": "Dienstleistungen",
+    "visas": "Visa",
+    "passports": "Reisepasse",
+    "civil_registry": "Zivilstandsamt",
+    "notarial": "Notarielle Dienste",
+    "appointments": "Terminvereinbarung"
+  },
+  "events": {
+    "title": "Veranstaltungen",
+    "detail": "Veranstaltungsdetails",
+    "upcoming": "Kommende Veranstaltungen",
+    "past": "Vergangene Veranstaltungen",
+    "date": "Datum",
+    "location": "Ort",
+    "type": "Typ",
+    "no_events": "Keine Veranstaltungen gefunden",
+    "load_more": "Mehr laden"
+  },
+  "contacts": {
+    "title": "Kontakt",
+    "department": "Abteilung",
+    "address": "Adresse",
+    "phone": "Telefon",
+    "fax": "Fax",
+    "email": "E-Mail",
+    "hours": "Offnungszeiten",
+    "map": "Standort"
+  },
+  "not_found": {
+    "title": "Seite nicht gefunden",
+    "message": "Die gesuchte Seite existiert nicht oder wurde entfernt.",
+    "back_home": "Zuruck zur Startseite"
+  },
+  "footer": {
+    "embassy": "Botschaft von Angola",
+    "embassy_full": "Botschaft der Republik Angola in der Bundesrepublik Deutschland",
+    "quick_links": "Schnelllinks",
+    "contact": "Kontakt",
+    "hours": "Offnungszeiten",
+    "copyright": "Botschaft von Angola in Deutschland. Alle Rechte vorbehalten.",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen"
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+    "read_more": "Weiterlesen",
+    "back": "Zuruck"
+  }
+}
