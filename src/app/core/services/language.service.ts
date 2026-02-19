@@ -14,7 +14,7 @@ export const LANGUAGES: Language[] = [
   { code: 'pt', label: 'Portugues', flag: '🇦🇴' },
   { code: 'en', label: 'English', flag: '🇬🇧' },
   { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
-  { code: 'cs', label: 'Crioulo', flag: '🇨🇻' }
+  { code: 'cs', label: 'Čeština', flag: '🇨🇿' }
 ];
 
 @Injectable({ providedIn: 'root' })

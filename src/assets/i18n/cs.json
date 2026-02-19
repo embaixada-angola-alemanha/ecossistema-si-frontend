@@ -1,106 +1,106 @@
 {
   "accessibility": {
-    "skip_to_content": "Salta pa konteudo prinsipál"
+    "skip_to_content": "Přeskočit na hlavní obsah"
   },
   "header": {
-    "republic": "Repúblika di Angola",
-    "embassy": "Enbaixada di Angola",
-    "country": "Repúblika Federal di Alemanha"
+    "republic": "Republika Angola",
+    "embassy": "Velvyslanectví Angoly",
+    "country": "Spolková republika Německo"
   },
   "nav": {
-    "home": "Inísiu",
-    "ambassador": "Enbaixadora",
-    "about_angola": "Sobri Angola",
-    "bilateral": "Relasons Bilateral",
-    "consular": "Sektor Konsular",
-    "events": "Eventus",
-    "contacts": "Kontatus"
+    "home": "Domů",
+    "ambassador": "Velvyslanec",
+    "about_angola": "O Angole",
+    "bilateral": "Bilaterální vztahy",
+    "consular": "Konzulární oddělení",
+    "events": "Události",
+    "contacts": "Kontakty"
   },
   "home": {
-    "title": "Inísiu",
-    "hero_title": "Enbaixada di Repúblika di Angola",
-    "hero_subtitle": "na Repúblika Federal di Alemanha",
-    "hero_cta": "Sektor Konsular",
-    "highlights": "Destakis",
-    "upcoming_events": "Prósimu Eventus",
-    "view_all_events": "Ver Tudu Eventus",
-    "quick_access": "Asesu Rápidu",
-    "no_events": "Ninhun eventu markadu",
-    "consular_services": "Servisus Konsular",
-    "consular_desc": "Vistus, pasaportis, registu sivil i otrus servisus konsular.",
-    "about_angola_title": "Sobri Angola",
-    "about_angola_desc": "Kunhesi país, si istória, jiografia, kultura i ekonomia.",
-    "bilateral_title": "Relasons Bilateral",
-    "bilateral_desc": "Kooperason entri Angola i Alemanha."
+    "title": "Domů",
+    "hero_title": "Velvyslanectví Republiky Angola",
+    "hero_subtitle": "ve Spolkové republice Německo",
+    "hero_cta": "Konzulární oddělení",
+    "highlights": "Highlights",
+    "upcoming_events": "Nadcházející události",
+    "view_all_events": "Zobrazit všechny události",
+    "quick_access": "Rychlý přístup",
+    "no_events": "Žádné plánované akce",
+    "consular_services": "Konzulární služby",
+    "consular_desc": "Vízum, pasy, rejstřík matrik a další konzulární služby.",
+    "about_angola_title": "O Angole",
+    "about_angola_desc": "Zjistěte více o zemi, její historii, geografii, kultuře a ekonomice.",
+    "bilateral_title": "Bilaterální vztahy",
+    "bilateral_desc": "Spolupráce mezi Angolou a Německem."
   },
   "ambassador": {
-    "title": "Enbaixadora"
+    "title": "Velvyslanec"
   },
   "about_angola": {
-    "title": "Sobri Angola",
+    "title": "O Angole",
     "sections": {
-      "presidente": "Prezidenti di Repúblika",
-      "poderes": "Órgons di Soberania",
-      "geografia": "Jiografia",
-      "historia": "Istória",
-      "demografia": "Demografia",
-      "economia": "Ekonomia",
+      "presidente": "Prezident republiky",
+      "poderes": "Státní orgány",
+      "geografia": "Geografie",
+      "historia": "Historie",
+      "demografia": "Demografie",
+      "economia": "Ekonomika",
       "cultura": "Kultura",
-      "simbolos": "Símbolus Nasional"
+      "simbolos": "Státní symboly"
     }
   },
   "bilateral": {
-    "title": "Relasons Bilateral"
+    "title": "Bilaterální vztahy"
   },
   "consular": {
-    "title": "Sektor Konsular",
-    "services": "Servisus",
-    "visas": "Vistus",
-    "passports": "Pasaportis",
-    "civil_registry": "Registu Sivil",
-    "notarial": "Servisus Notarial",
-    "appointments": "Agendamentus"
+    "title": "Konzulární oddělení",
+    "services": "Služby",
+    "visas": "Vízum",
+    "passports": "Pasy",
+    "civil_registry": "Rejstřík matrik",
+    "notarial": "Notářské služby",
+    "appointments": "Objednání termínu"
   },
   "events": {
-    "title": "Eventus",
-    "detail": "Detalhi di Eventu",
-    "upcoming": "Prósimu Eventus",
-    "past": "Eventus Pasadu",
-    "date": "Data",
-    "location": "Lokal",
-    "type": "Tipu",
-    "no_events": "Ninhun eventu enkontrádu",
-    "load_more": "Karega Mas"
+    "title": "Události",
+    "detail": "Detaily události",
+    "upcoming": "Nadcházející události",
+    "past": "Minulé události",
+    "date": "Datum",
+    "location": "Místo",
+    "type": "Typ",
+    "no_events": "Nebyly nalezeny žádné události",
+    "load_more": "Načíst více"
   },
   "contacts": {
-    "title": "Kontatus",
-    "department": "Departamentu",
-    "address": "Morada",
-    "phone": "Telefoni",
+    "title": "Kontakty",
+    "department": "Oddělení",
+    "address": "Adresa",
+    "phone": "Telefon",
     "fax": "Fax",
-    "email": "Email",
-    "hours": "Orário di Atendimentu",
-    "map": "Lokalizason"
+    "email": "E-mail",
+    "hours": "Otevírací doba",
+    "map": "Umístění"
   },
   "not_found": {
-    "title": "Pájina Ka Enkontrádu",
-    "message": "Pájina ki bu sta prokura ka ezisti o foi removidu.",
-    "back_home": "Volta pa Inísiu"
+    "title": "Stránka nenalezena",
+    "message": "Stránka, kterou hledáte, neexistuje nebo byla odstraněna.",
+    "back_home": "Zpět na domovskou stránku"
   },
   "footer": {
-    "embassy": "Enbaixada di Angola",
-    "embassy_full": "Enbaixada di Repúblika di Angola na Repúblika Federal di Alemanha",
-    "quick_links": "Links Rápidu",
-    "contact": "Kontatu",
-    "hours": "Orário",
-    "copyright": "Enbaixada di Angola na Alemanha. Tudu diretus rezervadu.",
-    "privacy": "Polítika di Privacidade",
-    "terms": "Termus di Uzu"
+    "embassy": "Velvyslanectví Angoly",
+    "embassy_full": "Velvyslanectví Republiky Angola ve Spolkové republice Německo",
+    "quick_links": "Rychlé odkazy",
+    "contact": "Kontakt",
+    "hours": "Otevírací doba",
+    "copyright": "Velvyslanectví Angoly v Německu. Všechna práva vyhrazena.",
+    "privacy": "Zásady ochrany osobních údajů",
+    "terms": "Podmínky použití"
   },
   "common": {
-    "loading": "Sta karega...",
-    "error": "Okorreu un éru. Tenta di novu.",
-    "read_more": "Le Mas",
-    "back": "Volta"
+    "loading": "Načítání...",
+    "error": "Došlo k chybě. Zkuste to prosím znovu.",
+    "read_more": "Více informací",
+    "back": "Zpět"
   }
 }
