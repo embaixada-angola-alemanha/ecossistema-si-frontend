@@ -5,7 +5,7 @@
   min-height: 420px;
   display: flex;
   align-items: center;
-  background: var(--bg-dark) url('/assets/images/hero-bg.jpg') center/cover no-repeat;
+  background: var(--bg-dark, #1a1a1a);
 
   &__overlay {
     position: absolute;
