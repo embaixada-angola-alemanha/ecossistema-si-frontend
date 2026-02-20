@@ -32,17 +32,15 @@ describe('EventsList', () => {
   });
 
   it('should initialize signals with default values', () => {
-    expect(component.events()).toEqual([]);
+    expect(component.upcomingEvents()).toEqual([]);
     expect(component.loading()).toBe(true);
-    expect(component.page()).toBe(0);
-    expect(component.hasMore()).toBe(false);
+    expect(component.pastPage()).toBe(0);
+    expect(component.pastHasMore()).toBe(false);
   });
 
-  it('should increment page on loadMore', () => {
-    // loadMore calls page.update and loadEvents, but since we override
-    // the template, the HTTP call from ngOnInit won't affect the template
-    expect(component.page()).toBe(0);
-    component.loadMore();
-    expect(component.page()).toBe(1);
+  it('should increment pastPage on loadMorePast', () => {
+    expect(component.pastPage()).toBe(0);
+    component.loadMorePast();
+    expect(component.pastPage()).toBe(1);
   });
 });

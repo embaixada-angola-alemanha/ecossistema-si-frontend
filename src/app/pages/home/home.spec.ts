@@ -32,7 +32,7 @@ describe('Home', () => {
   });
 
   it('should initialize signals with default values', () => {
-    expect(component.upcomingEvents()).toEqual([]);
+    expect(component.secondaryEvents()).toEqual([]);
     expect(component.highlights()).toEqual([]);
     expect(component.loading()).toBe(true);
   });
