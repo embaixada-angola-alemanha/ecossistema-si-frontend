@@ -10,7 +10,7 @@
   "nav": {
     "home": "Startseite",
     "ambassador": "Botschafterin",
-    "about_angola": "Uber Angola",
+    "about_angola": "Über Angola",
     "bilateral": "Bilaterale Beziehungen",
     "consular": "Konsularabteilung",
     "events": "Veranstaltungen",
@@ -27,8 +27,8 @@
     "quick_access": "Schnellzugriff",
     "no_events": "Keine geplanten Veranstaltungen",
     "consular_services": "Konsulardienste",
-    "consular_desc": "Visa, Reisepasse, Zivilstandsurkunden und andere konsularische Dienste.",
-    "about_angola_title": "Uber Angola",
+    "consular_desc": "Visa, Reisepässe, Zivilstandsurkunden und andere konsularische Dienste.",
+    "about_angola_title": "Über Angola",
     "about_angola_desc": "Entdecken Sie das Land, seine Geschichte, Geografie, Kultur und Wirtschaft.",
     "bilateral_title": "Bilaterale Beziehungen",
     "bilateral_desc": "Zusammenarbeit zwischen Angola und Deutschland."
@@ -37,9 +37,9 @@
     "title": "Botschafterin"
   },
   "about_angola": {
-    "title": "Uber Angola",
+    "title": "Über Angola",
     "sections": {
-      "presidente": "Prasident der Republik",
+      "presidente": "Präsident der Republik",
       "poderes": "Staatsorgane",
       "geografia": "Geografie",
       "historia": "Geschichte",
@@ -56,7 +56,7 @@
     "title": "Konsularabteilung",
     "services": "Dienstleistungen",
     "visas": "Visa",
-    "passports": "Reisepasse",
+    "passports": "Reisepässe",
     "civil_registry": "Zivilstandsamt",
     "notarial": "Notarielle Dienste",
     "appointments": "Terminvereinbarung"
@@ -66,11 +66,29 @@
     "detail": "Veranstaltungsdetails",
     "upcoming": "Kommende Veranstaltungen",
     "past": "Vergangene Veranstaltungen",
+    "featured": "Nächste Veranstaltung",
+    "featured_now": "Findet gerade statt",
+    "featured_soon": "Demnächst",
+    "tab_upcoming": "Bevorstehende",
+    "tab_calendar": "Kalender",
+    "tab_past": "Archiv",
     "date": "Datum",
+    "time": "Uhrzeit",
     "location": "Ort",
     "type": "Typ",
+    "all_types": "Alle",
     "no_events": "Keine Veranstaltungen gefunden",
-    "load_more": "Mehr laden"
+    "no_upcoming": "Zurzeit keine Veranstaltungen geplant.",
+    "no_past": "Keine vergangenen Veranstaltungen gefunden.",
+    "load_more": "Mehr laden",
+    "view_details": "Details anzeigen",
+    "calendar_today": "Heute",
+    "days_remaining": "Tage verbleibend",
+    "day_remaining": "Tag verbleibend",
+    "related": "Verwandte Veranstaltungen",
+    "back_to_events": "Zurück zu Veranstaltungen",
+    "past_event": "Vergangene Veranstaltung",
+    "add_to_calendar": "Zum Kalender hinzufügen"
   },
   "contacts": {
     "title": "Kontakt",
@@ -79,20 +97,20 @@
     "phone": "Telefon",
     "fax": "Fax",
     "email": "E-Mail",
-    "hours": "Offnungszeiten",
+    "hours": "Öffnungszeiten",
     "map": "Standort"
   },
   "not_found": {
     "title": "Seite nicht gefunden",
     "message": "Die gesuchte Seite existiert nicht oder wurde entfernt.",
-    "back_home": "Zuruck zur Startseite"
+    "back_home": "Zurück zur Startseite"
   },
   "footer": {
     "embassy": "Botschaft von Angola",
     "embassy_full": "Botschaft der Republik Angola in der Bundesrepublik Deutschland",
     "quick_links": "Schnelllinks",
     "contact": "Kontakt",
-    "hours": "Offnungszeiten",
+    "hours": "Öffnungszeiten",
     "copyright": "Botschaft von Angola in Deutschland. Alle Rechte vorbehalten.",
     "privacy": "Datenschutz",
     "terms": "Nutzungsbedingungen"
@@ -101,6 +119,6 @@
     "loading": "Laden...",
     "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
     "read_more": "Weiterlesen",
-    "back": "Zuruck"
+    "back": "Zurück"
   }
 }

@@ -1,0 +1,156 @@
+@if (loading()) {
+  <section class="section">
+    <div class="container">
+      <p class="ed-loading">{{ 'common.loading' | translate }}</p>
+    </div>
+  </section>
+} @else if (event(); as ev) {
+  <!-- Hero Header -->
+  <section class="ed-hero">
+    <div class="ed-hero__overlay"></div>
+    <div class="container ed-hero__content">
+      <a routerLink="/eventos" class="ed-hero__back">
+        <span class="material-icons-outlined">arrow_back</span>
+        {{ 'events.back_to_events' | translate }}
+      </a>
+
+      <div class="ed-hero__badges">
+        @if (isHappeningNow()) {
+          <span class="ed-hero__badge ed-hero__badge--live">
+            <span class="ed-hero__pulse"></span>
+            {{ 'events.featured_now' | translate }}
+          </span>
+        } @else if (isPastEvent()) {
+          <span class="ed-hero__badge ed-hero__badge--past">
+            {{ 'events.past_event' | translate }}
+          </span>
+        }
+        <span class="ed-hero__badge">{{ ev.tipoEvento }}</span>
+      </div>
+
+      <h1 class="ed-hero__title">{{ ev | localizedEvent:'titulo' }}</h1>
+
+      <div class="ed-hero__meta">
+        <span class="ed-hero__meta-item">
+          <span class="material-icons-outlined">calendar_today</span>
+          {{ ev.dataInicio | date:'dd MMM yyyy' }}
+          @if (ev.dataFim) {
+            <span> — {{ ev.dataFim | date:'dd MMM yyyy' }}</span>
+          }
+        </span>
+        @if (ev | localizedEvent:'local'; as location) {
+          <span class="ed-hero__meta-item">
+            <span class="material-icons-outlined">place</span>
+            {{ location }}
+          </span>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Two-Column Layout -->
+  <section class="section">
+    <div class="container ed-layout">
+      <!-- Main Content -->
+      <article class="ed-main">
+        <div class="page-content__body" [innerHTML]="ev | localizedEvent:'descricao'"></div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="ed-sidebar">
+        <!-- Date & Time Card -->
+        <div class="ed-sidebar__card">
+          <h4 class="ed-sidebar__card-title">
+            <span class="material-icons-outlined">event</span>
+            {{ 'events.date' | translate }}
+          </h4>
+          <p class="ed-sidebar__card-text">
+            {{ ev.dataInicio | date:'EEEE, dd MMMM yyyy' }}
+          </p>
+          <h4 class="ed-sidebar__card-title">
+            <span class="material-icons-outlined">schedule</span>
+            {{ 'events.time' | translate }}
+          </h4>
+          <p class="ed-sidebar__card-text">
+            {{ ev.dataInicio | date:'HH:mm' }}
+            @if (ev.dataFim) {
+              — {{ ev.dataFim | date:'HH:mm' }}
+            }
+          </p>
+          @if (ev.dataFim) {
+            <h4 class="ed-sidebar__card-title">
+              <span class="material-icons-outlined">event_available</span>
+              {{ 'events.date' | translate }} ({{ 'events.tab_past' | translate }})
+            </h4>
+            <p class="ed-sidebar__card-text">
+              {{ ev.dataFim | date:'EEEE, dd MMMM yyyy' }}
+            </p>
+          }
+        </div>
+
+        <!-- Location Card -->
+        @if (ev | localizedEvent:'local'; as location) {
+          <div class="ed-sidebar__card">
+            <h4 class="ed-sidebar__card-title">
+              <span class="material-icons-outlined">place</span>
+              {{ 'events.location' | translate }}
+            </h4>
+            <p class="ed-sidebar__card-text">
+              <a [href]="'https://www.google.com/maps/search/?api=1&query=' + encodeLocation(location)"
+                 target="_blank" rel="noopener" class="ed-sidebar__map-link">
+                {{ location }}
+                <span class="material-icons-outlined">open_in_new</span>
+              </a>
+            </p>
+          </div>
+        }
+
+        <!-- Type Card -->
+        <div class="ed-sidebar__card">
+          <h4 class="ed-sidebar__card-title">
+            <span class="material-icons-outlined">category</span>
+            {{ 'events.type' | translate }}
+          </h4>
+          <p class="ed-sidebar__card-text">{{ ev.tipoEvento }}</p>
+        </div>
+
+        <!-- Add to Calendar -->
+        @if (!isPastEvent()) {
+          <a [href]="calendarUrl()" target="_blank" rel="noopener" class="ed-sidebar__cal-btn">
+            <span class="material-icons-outlined">calendar_month</span>
+            {{ 'events.add_to_calendar' | translate }}
+          </a>
+        }
+      </aside>
+    </div>
+  </section>
+
+  <!-- Related Events -->
+  @if (relatedEvents().length > 0) {
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="ed-related__title">{{ 'events.related' | translate }}</h2>
+        <div class="ed-related__grid">
+          @for (rel of relatedEvents(); track rel.id) {
+            <a [routerLink]="['/eventos', rel.id]" class="ed-related__card">
+              <div class="ed-related__date-block">
+                <span class="ed-related__day">{{ rel.dataInicio | date:'dd' }}</span>
+                <span class="ed-related__month">{{ rel.dataInicio | date:'MMM' }}</span>
+              </div>
+              <div class="ed-related__body">
+                <div class="ed-related__type">{{ rel.tipoEvento }}</div>
+                <h4 class="ed-related__card-title">{{ rel | localizedEvent:'titulo' }}</h4>
+                @if (rel | localizedEvent:'local'; as loc) {
+                  <span class="ed-related__location">
+                    <span class="material-icons-outlined">place</span>
+                    {{ loc }}
+                  </span>
+                }
+              </div>
+            </a>
+          }
+        </div>
+      </div>
+    </section>
+  }
+}

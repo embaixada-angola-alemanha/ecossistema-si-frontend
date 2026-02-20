@@ -1,7 +1,7 @@
 .footer {
   background: var(--bg-dark);
   color: rgba(255, 255, 255, 0.8);
-  padding-top: var(--space-3xl);
+  padding-top: var(--space-4xl);
 
   &__inner {
     display: grid;
@@ -12,11 +12,14 @@
 
   &__heading {
     font-family: var(--font-serif);
-    font-size: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
     color: var(--white);
-    margin-bottom: var(--space-md);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-lg);
     padding-bottom: var(--space-sm);
-    border-bottom: 2px solid var(--red);
+    border-bottom: 1px solid var(--gold-accent);
     display: inline-block;
   }
 
@@ -74,10 +77,10 @@
   }
 
   &__bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: var(--space-md) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: var(--space-lg) 0;
     font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.4);
   }
 
   &__bottom-inner {

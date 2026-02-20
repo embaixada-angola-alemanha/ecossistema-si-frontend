@@ -11,7 +11,7 @@ export interface Language {
 }
 
 export const LANGUAGES: Language[] = [
-  { code: 'pt', label: 'Portugues', flag: '🇦🇴' },
+  { code: 'pt', label: 'Português', flag: '🇦🇴' },
   { code: 'en', label: 'English', flag: '🇬🇧' },
   { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
   { code: 'cs', label: 'Čeština', flag: '🇨🇿' }

@@ -1,37 +1,37 @@
 {
   "accessibility": {
-    "skip_to_content": "Saltar para o conteudo"
+    "skip_to_content": "Saltar para o conteúdo"
   },
   "header": {
-    "republic": "Republica de Angola",
+    "republic": "República de Angola",
     "embassy": "Embaixada de Angola",
-    "country": "Republica Federal da Alemanha"
+    "country": "República Federal da Alemanha"
   },
   "nav": {
-    "home": "Inicio",
+    "home": "Início",
     "ambassador": "Embaixadora",
     "about_angola": "Sobre Angola",
-    "bilateral": "Relacoes Bilaterais",
+    "bilateral": "Relações Bilaterais",
     "consular": "Sector Consular",
     "events": "Eventos",
     "contacts": "Contactos"
   },
   "home": {
-    "title": "Inicio",
-    "hero_title": "Embaixada da Republica de Angola",
-    "hero_subtitle": "na Republica Federal da Alemanha",
-    "hero_cta": "Sector Consular",
+    "title": "Início",
+    "hero_title": "Embaixada da República de Angola",
+    "hero_subtitle": "na República Federal da Alemanha",
+    "hero_cta": "Serviços Consulares",
     "highlights": "Destaques",
-    "upcoming_events": "Proximos Eventos",
+    "upcoming_events": "Próximos Eventos",
     "view_all_events": "Ver Todos os Eventos",
-    "quick_access": "Acesso Rapido",
+    "quick_access": "Acesso Rápido",
     "no_events": "Nenhum evento agendado",
-    "consular_services": "Servicos Consulares",
-    "consular_desc": "Vistos, passaportes, registos civis e outros servicos consulares.",
+    "consular_services": "Serviços Consulares",
+    "consular_desc": "Vistos, passaportes, registos civis e outros serviços consulares.",
     "about_angola_title": "Sobre Angola",
-    "about_angola_desc": "Conheca o pais, a sua historia, geografia, cultura e economia.",
-    "bilateral_title": "Relacoes Bilaterais",
-    "bilateral_desc": "Cooperacao entre Angola e a Alemanha."
+    "about_angola_desc": "Conheça o país, a sua história, geografia, cultura e economia.",
+    "bilateral_title": "Relações Bilaterais",
+    "bilateral_desc": "Cooperação entre Angola e a Alemanha."
   },
   "ambassador": {
     "title": "Embaixadora"
@@ -39,38 +39,56 @@
   "about_angola": {
     "title": "Sobre Angola",
     "sections": {
-      "presidente": "Presidente da Republica",
-      "poderes": "Orgaos de Soberania",
+      "presidente": "Presidente da República",
+      "poderes": "Órgãos de Soberania",
       "geografia": "Geografia",
-      "historia": "Historia",
+      "historia": "História",
       "demografia": "Demografia",
       "economia": "Economia",
       "cultura": "Cultura",
-      "simbolos": "Simbolos Nacionais"
+      "simbolos": "Símbolos Nacionais"
     }
   },
   "bilateral": {
-    "title": "Relacoes Bilaterais"
+    "title": "Relações Bilaterais"
   },
   "consular": {
     "title": "Sector Consular",
-    "services": "Servicos",
+    "services": "Serviços",
     "visas": "Vistos",
     "passports": "Passaportes",
     "civil_registry": "Registo Civil",
-    "notarial": "Servicos Notariais",
+    "notarial": "Serviços Notariais",
     "appointments": "Agendamentos"
   },
   "events": {
     "title": "Eventos",
     "detail": "Detalhe do Evento",
-    "upcoming": "Proximos Eventos",
+    "upcoming": "Próximos Eventos",
     "past": "Eventos Passados",
+    "featured": "Próximo Evento",
+    "featured_now": "A Decorrer",
+    "featured_soon": "Em Breve",
+    "tab_upcoming": "Próximos",
+    "tab_calendar": "Calendário",
+    "tab_past": "Arquivo",
     "date": "Data",
+    "time": "Hora",
     "location": "Local",
     "type": "Tipo",
+    "all_types": "Todos",
     "no_events": "Nenhum evento encontrado",
-    "load_more": "Carregar Mais"
+    "no_upcoming": "Nenhum evento agendado de momento.",
+    "no_past": "Nenhum evento passado encontrado.",
+    "load_more": "Carregar Mais",
+    "view_details": "Ver Detalhes",
+    "calendar_today": "Hoje",
+    "days_remaining": "dias restantes",
+    "day_remaining": "dia restante",
+    "related": "Eventos Relacionados",
+    "back_to_events": "Voltar aos Eventos",
+    "past_event": "Evento Passado",
+    "add_to_calendar": "Adicionar ao Calendário"
   },
   "contacts": {
     "title": "Contactos",
@@ -79,22 +97,22 @@
     "phone": "Telefone",
     "fax": "Fax",
     "email": "Email",
-    "hours": "Horario de Atendimento",
-    "map": "Localizacao"
+    "hours": "Horário de Atendimento",
+    "map": "Localização"
   },
   "not_found": {
-    "title": "Pagina Nao Encontrada",
-    "message": "A pagina que procura nao existe ou foi removida.",
-    "back_home": "Voltar ao Inicio"
+    "title": "Página Não Encontrada",
+    "message": "A página que procura não existe ou foi removida.",
+    "back_home": "Voltar ao Início"
   },
   "footer": {
     "embassy": "Embaixada de Angola",
-    "embassy_full": "Embaixada da Republica de Angola na Republica Federal da Alemanha",
-    "quick_links": "Links Rapidos",
+    "embassy_full": "Embaixada da República de Angola na República Federal da Alemanha",
+    "quick_links": "Links Rápidos",
     "contact": "Contacto",
-    "hours": "Horario",
+    "hours": "Horário",
     "copyright": "Embaixada de Angola na Alemanha. Todos os direitos reservados.",
-    "privacy": "Politica de Privacidade",
+    "privacy": "Política de Privacidade",
     "terms": "Termos de Uso"
   },
   "common": {

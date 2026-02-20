@@ -1,5 +1,5 @@
 .top-strip {
-  background: var(--red);
+  background: var(--bg-dark);
   color: var(--white);
   height: var(--top-strip-height);
   font: 500 .75rem/1 var(--font-sans);
@@ -14,30 +14,32 @@
   &__text {
     text-transform: uppercase;
     font: .7rem var(--font-serif);
-    letter-spacing: 1.5px;
-    color: var(--gold-light);
+    letter-spacing: 2px;
+    color: var(--gold);
   }
   &__lang { display: flex; gap: 2px; }
 }
 
 .lang-btn {
   background: transparent;
-  border: 1px solid rgba(255,255,255,.3);
-  color: rgba(255,255,255,.7);
-  padding: 2px 8px;
+  border: 1px solid rgba(255,255,255,.2);
+  color: rgba(255,255,255,.6);
+  padding: 3px 10px;
   font: 600 .65rem var(--font-sans);
   cursor: pointer;
+  border-radius: 2px;
   transition: all var(--transition);
-  &:hover { background: rgba(255,255,255,.15); color: var(--white); }
-  &--active { background: rgba(255,255,255,.2); color: var(--white); border-color: var(--gold); }
+  &:hover { background: rgba(255,255,255,.1); color: var(--white); }
+  &--active { background: rgba(255,255,255,.15); color: var(--white); border-color: var(--gold); }
 }
 
 .header {
   background: var(--white);
   height: var(--header-height);
-  border-bottom: 1px solid var(--border);
+  border-bottom: none;
   position: relative;
   z-index: 100;
+  box-shadow: 0 1px 0 var(--border-light);
 
   &__inner {
     display: flex;
@@ -53,9 +55,9 @@
     color: var(--text);
     &:hover { text-decoration: none; }
   }
-  &__coat-of-arms { width: 48px; height: 48px; object-fit: contain; }
+  &__logo { height: 56px; width: auto; object-fit: contain; }
   &__titles { display: flex; flex-direction: column; }
-  &__title { font: 700 1.1rem/1.2 var(--font-serif); color: var(--black); }
+  &__title { font: 700 1.15rem/1.2 var(--font-serif); color: var(--black); letter-spacing: -0.01em; }
   &__subtitle { font-size: .75rem; color: var(--text-light); letter-spacing: .5px; }
   &__hamburger {
     display: none;
@@ -75,6 +77,7 @@
   position: sticky;
   top: 0;
   z-index: 99;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 
   &__inner { display: flex; align-items: center; height: 100%; }
   &__link {
@@ -82,16 +85,16 @@
     align-items: center;
     height: 100%;
     padding: 0 var(--space-lg);
-    color: rgba(255,255,255,.9);
+    color: rgba(255,255,255,.85);
     font-size: .8rem;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: .5px;
+    letter-spacing: .75px;
     text-decoration: none;
     transition: all var(--transition);
     white-space: nowrap;
-    &:hover { background: rgba(0,0,0,.15); color: var(--white); text-decoration: none; }
-    &--active { background: rgba(0,0,0,.2); color: var(--white); border-bottom: 2px solid var(--gold); }
+    &:hover { background: rgba(255,255,255,.1); color: var(--white); text-decoration: none; }
+    &--active { background: rgba(255,255,255,.12); color: var(--white); border-bottom: 2px solid var(--gold); }
     &--has-dropdown .nav__arrow { font-size: 16px; margin-left: 2px; transition: transform var(--transition); }
   }
   &__dropdown {
@@ -131,7 +134,7 @@
 @media (max-width: 768px) {
   .header {
     &__hamburger { display: flex; }
-    &__coat-of-arms { width: 36px; height: 36px; }
+    &__logo { height: 44px; }
     &__title { font-size: .9rem; }
   }
   .nav {

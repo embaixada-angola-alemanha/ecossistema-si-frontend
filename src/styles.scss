@@ -1,25 +1,28 @@
 /* ── SI — Sítio Institucional: Global Styles ────────────────────── */
 
 :root {
-  /* Angola institutional palette */
+  /* Angola institutional palette — refined */
   --red: #cc092f;
-  --red-dark: #a00725;
+  --red-dark: #9e0724;
   --red-light: #e8334f;
-  --gold: #d4a020;
-  --gold-light: #e8c44e;
-  --gold-dim: rgba(212, 160, 32, 0.12);
+  --red-subtle: rgba(204, 9, 47, 0.06);
+  --gold: #c9982e;
+  --gold-light: #dbb550;
+  --gold-dim: rgba(201, 152, 46, 0.10);
+  --gold-accent: #b8891f;
   --black: #1a1a1a;
   --white: #ffffff;
+  --cream: #faf8f5;
   --bg: #ffffff;
-  --bg-alt: #f7f5f2;
-  --bg-dark: #1a1a1a;
-  --text: #1a1a1a;
-  --text-light: #555555;
+  --bg-alt: #f5f3ef;
+  --bg-dark: #1c1c1e;
+  --text: #2c2c2c;
+  --text-light: #6b6b6b;
   --text-inverse: #ffffff;
   --border: #e0ddd8;
-  --border-light: #f0ede8;
-  --shadow: rgba(0, 0, 0, 0.08);
-  --shadow-strong: rgba(0, 0, 0, 0.16);
+  --border-light: #eeece7;
+  --shadow: rgba(0, 0, 0, 0.06);
+  --shadow-strong: rgba(0, 0, 0, 0.12);
 
   /* Typography */
   --font-serif: 'Noto Serif', Georgia, 'Times New Roman', serif;
@@ -33,12 +36,15 @@
   --space-xl: 2rem;
   --space-2xl: 3rem;
   --space-3xl: 4rem;
+  --space-4xl: 5rem;
+  --space-5xl: 7rem;
 
   /* Layout */
   --max-width: 1200px;
+  --content-width: 800px;
   --header-height: 80px;
-  --nav-height: 48px;
-  --top-strip-height: 32px;
+  --nav-height: 52px;
+  --top-strip-height: 36px;
 
   /* Transitions */
   --transition: 200ms ease;
@@ -74,21 +80,22 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
-  font-weight: 700;
-  line-height: 1.3;
-  color: var(--black);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text);
+  letter-spacing: -0.01em;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
-h5 { font-size: 1.125rem; }
-h6 { font-size: 1rem; }
+h1 { font-size: 2.75rem; font-weight: 700; }
+h2 { font-size: 1.875rem; }
+h3 { font-size: 1.375rem; }
+h4 { font-size: 1.125rem; }
+h5 { font-size: 1rem; font-weight: 600; }
+h6 { font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
 
 p {
   margin-bottom: var(--space-md);
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 a {
@@ -99,6 +106,8 @@ a {
   &:hover {
     color: var(--red-dark);
     text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
   }
 }
 
@@ -130,19 +139,20 @@ ul, ol {
 
 .section__title {
   font-family: var(--font-serif);
-  font-size: 2rem;
-  margin-bottom: var(--space-xl);
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2xl);
   position: relative;
-  padding-bottom: var(--space-sm);
+  padding-bottom: var(--space-md);
 
   &::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 60px;
-    height: 3px;
-    background: var(--red);
+    width: 40px;
+    height: 2px;
+    background: var(--gold-accent);
   }
 }
 
@@ -159,14 +169,14 @@ ul, ol {
   display: inline-flex;
   align-items: center;
   gap: var(--space-sm);
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.75rem;
   font-family: var(--font-sans);
   font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.02em;
   border: none;
-  border-radius: 2px;
+  border-radius: 3px;
   cursor: pointer;
   transition: all var(--transition);
   text-decoration: none;
@@ -183,13 +193,14 @@ ul, ol {
   &:hover {
     background: var(--red-dark);
     color: var(--white);
+    box-shadow: 0 2px 8px rgba(204, 9, 47, 0.25);
   }
 }
 
 .btn--outline {
   background: transparent;
   color: var(--red);
-  border: 2px solid var(--red);
+  border: 1.5px solid var(--red);
 
   &:hover {
     background: var(--red);

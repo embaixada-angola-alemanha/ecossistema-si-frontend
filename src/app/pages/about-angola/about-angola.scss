@@ -24,7 +24,7 @@
   transition: all var(--transition);
 
   &:hover {
-    border-color: var(--red);
+    border-color: var(--gold-accent);
     box-shadow: 0 4px 16px var(--shadow);
     transform: translateY(-2px);
     text-decoration: none;
@@ -32,14 +32,14 @@
 
     .subsection-card__icon {
       color: var(--white);
-      background: var(--red);
+      background: var(--gold-accent);
     }
   }
 
   &__icon {
     font-size: 32px;
-    color: var(--red);
-    background: rgba(204, 9, 47, 0.08);
+    color: var(--gold-accent);
+    background: var(--gold-dim);
     width: 64px;
     height: 64px;
     display: flex;

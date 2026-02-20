@@ -113,8 +113,10 @@ export class SeoService {
       'logo': `${this.siteUrl}/assets/images/brasao-angola.svg`,
       'address': {
         '@type': 'PostalAddress',
-        'addressCountry': 'DE',
-        'addressLocality': 'Berlin'
+        'streetAddress': 'Werderscher Markt 9',
+        'postalCode': '10117',
+        'addressLocality': 'Berlin',
+        'addressCountry': 'DE'
       },
       'parentOrganization': {
         '@type': 'GovernmentOrganization',
@@ -142,7 +144,12 @@ export class SeoService {
       'endDate': event.endDate ?? event.startDate,
       'location': {
         '@type': 'Place',
-        'name': event.location
+        'name': event.location,
+        'address': {
+          '@type': 'PostalAddress',
+          'addressLocality': 'Berlin',
+          'addressCountry': 'DE'
+        }
       },
       'organizer': {
         '@type': 'GovernmentOrganization',

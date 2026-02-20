@@ -1,4 +1,4 @@
-import { Component, inject, signal, OnInit, DestroyRef, input } from '@angular/core';
+import { Component, inject, signal, computed, effect, DestroyRef, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
@@ -13,102 +13,10 @@ import { LanguageService } from '@core/services/language.service';
   selector: 'si-event-detail',
   standalone: true,
   imports: [CommonModule, RouterLink, TranslateModule, LocalizedEventPipe],
-  template: `
-    <section class="page-header">
-      <div class="container">
-        <h1>{{ 'events.detail' | translate }}</h1>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <a routerLink="/eventos" class="back-link">
-          <span class="material-icons-outlined">arrow_back</span>
-          {{ 'events.title' | translate }}
-        </a>
-
-        @if (loading()) {
-          <p class="loading-text">{{ 'common.loading' | translate }}</p>
-        } @else if (event()) {
-          <article class="event-detail">
-            <h2 class="event-detail__title">{{ event() | localizedEvent:'titulo' }}</h2>
-
-            <div class="event-detail__meta">
-              <div class="event-detail__meta-item">
-                <span class="material-icons-outlined">event</span>
-                <span>{{ event()!.dataInicio | date:'dd MMM yyyy, HH:mm' }}</span>
-                @if (event()!.dataFim) {
-                  <span>— {{ event()!.dataFim | date:'dd MMM yyyy, HH:mm' }}</span>
-                }
-              </div>
-              @if (event() | localizedEvent:'local') {
-                <div class="event-detail__meta-item">
-                  <span class="material-icons-outlined">place</span>
-                  <span>{{ event() | localizedEvent:'local' }}</span>
-                </div>
-              }
-              @if (event()!.tipoEvento) {
-                <div class="event-detail__meta-item">
-                  <span class="material-icons-outlined">category</span>
-                  <span>{{ event()!.tipoEvento }}</span>
-                </div>
-              }
-            </div>
-
-            <div class="page-content__body" [innerHTML]="event() | localizedEvent:'descricao'"></div>
-          </article>
-        }
-      </div>
-    </section>
-  `,
-  styles: [`
-    @use '../shared-page';
-
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      margin-bottom: var(--space-lg);
-      font-size: 0.875rem;
-      color: var(--red);
-      .material-icons-outlined { font-size: 18px; }
-      &:hover { text-decoration: none; }
-    }
-
-    .event-detail {
-      max-width: 800px;
-
-      &__title {
-        font-family: var(--font-serif);
-        font-size: 2rem;
-        margin-bottom: var(--space-lg);
-      }
-
-      &__meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: var(--space-lg);
-        margin-bottom: var(--space-xl);
-        padding-bottom: var(--space-lg);
-        border-bottom: 1px solid var(--border);
-      }
-
-      &__meta-item {
-        display: flex;
-        align-items: center;
-        gap: var(--space-sm);
-        font-size: 0.9rem;
-        color: var(--text-light);
-
-        .material-icons-outlined {
-          font-size: 20px;
-          color: var(--red);
-        }
-      }
-    }
-  `]
+  templateUrl: './event-detail.html',
+  styleUrl: './event-detail.scss'
 })
-export class EventDetail implements OnInit {
+export class EventDetail {
 
   private readonly eventService = inject(EventService);
   private readonly seoService = inject(SeoService);
@@ -117,18 +25,75 @@ export class EventDetail implements OnInit {
 
   readonly id = input.required<string>();
   readonly event = signal<SiteEvent | null>(null);
+  readonly relatedEvents = signal<SiteEvent[]>([]);
   readonly loading = signal(true);
 
-  ngOnInit(): void {
-    this.eventService.getEventById(this.id())
+  readonly isPastEvent = computed(() => {
+    const e = this.event();
+    if (!e) return false;
+    const end = e.dataFim ? new Date(e.dataFim) : new Date(e.dataInicio);
+    return end < new Date();
+  });
+
+  readonly isHappeningNow = computed(() => {
+    const e = this.event();
+    if (!e) return false;
+    const now = new Date();
+    const start = new Date(e.dataInicio);
+    const end = e.dataFim ? new Date(e.dataFim) : start;
+    return now >= start && now <= end;
+  });
+
+  readonly calendarUrl = computed(() => {
+    const e = this.event();
+    if (!e) return '';
+    const start = e.dataInicio.replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+    const end = e.dataFim
+      ? e.dataFim.replace(/[-:]/g, '').replace(/\.\d{3}/, '')
+      : start;
+    const title = encodeURIComponent(e.tituloPt);
+    const location = encodeURIComponent(e.localPt || '');
+    return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${start}/${end}&location=${location}`;
+  });
+
+  constructor() {
+    effect(() => {
+      const eventId = this.id();
+      this.loadEvent(eventId);
+    });
+  }
+
+  encodeLocation(location: string): string {
+    return encodeURIComponent(location);
+  }
+
+  private loadEvent(eventId: string): void {
+    this.loading.set(true);
+    this.event.set(null);
+    this.relatedEvents.set([]);
+
+    this.eventService.getEventById(eventId)
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
         next: e => {
           this.event.set(e);
           this.loading.set(false);
           this.updateSeo(e);
+          this.loadRelated(e);
         },
         error: () => this.loading.set(false)
+      });
+  }
+
+  private loadRelated(current: SiteEvent): void {
+    this.eventService.getUpcomingEvents()
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe({
+        next: events => {
+          this.relatedEvents.set(
+            events.filter(e => e.id !== current.id).slice(0, 3)
+          );
+        }
       });
   }
 

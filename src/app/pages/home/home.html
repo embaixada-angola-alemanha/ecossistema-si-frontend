@@ -4,8 +4,9 @@
   <div class="container hero__content">
     <h1 class="hero__title">{{ 'home.hero_title' | translate }}</h1>
     <p class="hero__subtitle">{{ 'home.hero_subtitle' | translate }}</p>
-    <a routerLink="/sector-consular" class="btn btn--primary hero__cta">
+    <a routerLink="/sector-consular" class="btn btn--hero">
       {{ 'home.hero_cta' | translate }}
+      <span class="material-icons-outlined">arrow_forward</span>
     </a>
   </div>
 </section>
@@ -54,33 +55,78 @@
   </section>
 }
 
-<!-- Upcoming Events -->
+<!-- Upcoming Events — Featured + Secondary -->
 <section class="section" [class.section--alt]="highlights().length === 0">
   <div class="container">
     <h2 class="section__title">{{ 'home.upcoming_events' | translate }}</h2>
 
     @if (loading()) {
       <p class="loading-text">{{ 'common.loading' | translate }}</p>
-    } @else if (upcomingEvents().length === 0) {
+    } @else if (!featuredEvent()) {
       <p class="no-events">{{ 'home.no_events' | translate }}</p>
     } @else {
-      <div class="events-grid">
-        @for (event of upcomingEvents(); track event.id) {
-          <a [routerLink]="['/eventos', event.id]" class="event-card">
-            <div class="event-card__date">
-              <span class="event-card__day">{{ event.dataInicio | date:'dd' }}</span>
-              <span class="event-card__month">{{ event.dataInicio | date:'MMM' }}</span>
-            </div>
-            <div class="event-card__info">
-              <h3 class="event-card__title">{{ event | localizedEvent:'titulo' }}</h3>
-              <p class="event-card__location">
+      <!-- Featured Next Event -->
+      <a [routerLink]="['/eventos', featuredEvent()!.id]" class="featured-event">
+        <div class="featured-event__date-block">
+          <span class="featured-event__day">{{ featuredEvent()!.dataInicio | date:'dd' }}</span>
+          <span class="featured-event__month">{{ featuredEvent()!.dataInicio | date:'MMM' }}</span>
+          <span class="featured-event__year">{{ featuredEvent()!.dataInicio | date:'yyyy' }}</span>
+        </div>
+        <div class="featured-event__body">
+          <div class="featured-event__top">
+            @if (isHappeningNow()) {
+              <span class="featured-event__badge featured-event__badge--live">
+                <span class="featured-event__pulse"></span>
+                {{ 'events.featured_now' | translate }}
+              </span>
+            } @else {
+              <span class="featured-event__badge">{{ 'events.featured' | translate }}</span>
+            }
+            <span class="featured-event__type">{{ featuredEvent()!.tipoEvento }}</span>
+          </div>
+          <h3 class="featured-event__title">{{ featuredEvent()! | localizedEvent:'titulo' }}</h3>
+          <p class="featured-event__excerpt">{{ featuredEvent()! | localizedEvent:'descricao' | stripHtml }}</p>
+          <div class="featured-event__footer">
+            @if (featuredEvent()! | localizedEvent:'local'; as location) {
+              <span class="featured-event__location">
                 <span class="material-icons-outlined">place</span>
-                {{ event | localizedEvent:'local' }}
-              </p>
-            </div>
-          </a>
-        }
-      </div>
+                {{ location }}
+              </span>
+            }
+            @if (!isHappeningNow() && daysUntilFeatured() > 0) {
+              <span class="featured-event__countdown">
+                <span class="featured-event__countdown-num">{{ daysUntilFeatured() }}</span>
+                {{ daysUntilFeatured() === 1
+                  ? ('events.day_remaining' | translate)
+                  : ('events.days_remaining' | translate) }}
+              </span>
+            }
+          </div>
+        </div>
+        <span class="featured-event__arrow material-icons-outlined">arrow_forward</span>
+      </a>
+
+      <!-- Secondary Event Cards -->
+      @if (secondaryEvents().length > 0) {
+        <div class="events-grid">
+          @for (event of secondaryEvents(); track event.id) {
+            <a [routerLink]="['/eventos', event.id]" class="event-card">
+              <div class="event-card__date">
+                <span class="event-card__day">{{ event.dataInicio | date:'dd' }}</span>
+                <span class="event-card__month">{{ event.dataInicio | date:'MMM' }}</span>
+              </div>
+              <div class="event-card__info">
+                <h3 class="event-card__title">{{ event | localizedEvent:'titulo' }}</h3>
+                <p class="event-card__location">
+                  <span class="material-icons-outlined">place</span>
+                  {{ event | localizedEvent:'local' }}
+                </p>
+              </div>
+            </a>
+          }
+        </div>
+      }
+
       <div class="events-more">
         <a routerLink="/eventos" class="btn btn--outline">
           {{ 'home.view_all_events' | translate }}
